@@ -8,7 +8,7 @@
 #   decrypt them to recreate the original file.
 #
 # USAGE =======================================================================
-#   $ ./horcrux cast -i file -n name -p pass -s n OR -b n[k|m]
+#   $ ./horcrux split -i file -n name -p pass -s n OR -b n[k|m]
 #   where -i = input file/archive
 #         -n = a unique name identifying this horcrux
 #         -p = the password used to encrypt this horcrux
@@ -20,12 +20,13 @@
 #   or -b flag need be specified at a time, never both.
 #
 #
-#   $ ./horcrux restore -i folder/of/pieces -p pass
+#   $ ./horcrux join -i folder/of/pieces -p pass
 #   where -i = a folder containing horcrux pieces
 #         -p = the password used to decrypt this horcrux
 #   Concatenates, decodes and decrypts a horcrux to recreate the original file.
 #
 # Created: 10-Sep-2015
+# Updated: 01-Jul-2020
 
 set -o errtrace
 set -o pipefail
